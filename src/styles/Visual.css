@@ -1,0 +1,56 @@
+#Visual {
+  text-align: center;
+  padding-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.visual_tit {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+}
+.visual_txt {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.visual_img {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 380px;
+  z-index: 600;
+  img {
+    display: block;
+  }
+}
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 3s;
+  z-index: 500;
+  animation: scroll 1.5s infinite;
+  img {
+    display: block;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 6%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}

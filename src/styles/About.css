@@ -1,0 +1,7 @@
+.About {
+  width: 100%;
+  height: 100vh;
+  background: #acacac;
+  position: relative;
+  z-index: 1;
+}

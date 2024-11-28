@@ -4,7 +4,7 @@ import Particle from "./Particle";
 const Visual = () => {
   return (
     <section id="Visual" className="sec">
-      {/* <Particle /> */}
+      <Particle />
       <div className="in sec_in">
         <div className="visual_tit_wrap">
           <h2 className="visual_tit p_bold">안녕하세요!</h2>

@@ -18,7 +18,7 @@
     left: -100%;
     top: 0;
     width: 80%;
-    height: 100%;
+    height: 100vh;
     overflow-y: auto;
     background: var(--bgColor);
     z-index: 910;
@@ -64,31 +64,10 @@
     position: relative;
     z-index: 999;
   }
-  .mmenu {
-    width: 100%;
-    height: 100%;
-    .burger {
-      display: block;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      margin-bottom: 4px;
-      transition: transform 0.3s;
-    }
-  }
-  .mmenu.active .burger:nth-child(1) {
-    transform: rotate(45deg);
-  }
-  .mmenu.active .burger:nth-child(2) {
-    transform: translateX(100px);
-  }
-  .mmenu.active .burger:nth-child(3) {
-    transform: rotate(-45deg);
-    margin-top: -12px;
-  }
+
   .mobile_wrap.active {
     left: 0;
-    height: 100vh;
+    /* height: 100vh; */
   }
   .mobile_wrap.active + .gnb_bg {
     display: block;

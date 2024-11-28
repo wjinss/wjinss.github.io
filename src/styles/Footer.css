@@ -1,0 +1,16 @@
+#footer {
+  font-size: 1.2rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  background: var(--bgColor);
+}
+.footer_in {
+  padding: 60px 20px;
+}
+.p_thin {
+  font-weight: 200;
+}
+.cpr {
+  margin-top: 10px;
+}

@@ -1,0 +1,69 @@
+html {
+  font-size: 10px;
+  --mainColor: #00ddb3;
+  --txtColor: #fff;
+  --bgColor: #010a09;
+}
+body {
+  font-family: "Pretendard Variable", "Pretendard", "Roboto",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  color: inherit;
+}
+a,
+span {
+  display: inline-block;
+}
+.in {
+  padding: 0 30px;
+  min-width: 375px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.maincolor {
+  color: var(--mainColor);
+}
+.titcolor {
+  color: var(--txtColor);
+}
+.bgcolor {
+  background: var(--bgColor);
+}
+.bgtxtcolor {
+  color: var(--bgColor);
+}
+.p_bold {
+  font-weight: 700;
+}
+
+.sec {
+  width: 100%;
+  height: 100vh;
+}
+.sec_in {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}

@@ -11,6 +11,10 @@ const Layout = () => {
   const style = {
     position: "relative",
   };
+  const handleTopClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="Layout bgcolor" style={style}>
       <Header />
@@ -22,13 +26,7 @@ const Layout = () => {
         <Contact />
       </div>
       <Footer />
-      <Button
-        type={""}
-        onClick={(e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-      />
+      <Button className={"TOP"} onClick={handleTopClick} />
     </div>
   );
 };

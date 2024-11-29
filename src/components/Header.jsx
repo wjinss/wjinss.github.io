@@ -4,23 +4,24 @@ import { useState } from "react";
 
 const Header = () => {
   const [action, setAction] = useState(false);
-  // const [gnb] = useState([{"ABOUT", "PUBLISHING", "ART WORK", "CONTACT"}]);
-  const [gnbs] = useState([
-    { id: `gnb1`, title: `ABOUT` },
-    { id: `gnb2`, title: `PUBLISHING` },
-    { id: `gnb3`, title: `WORK` },
-    { id: `gnb4`, title: `CONTACT` },
-  ]);
   const handleMMENUClick = () => {
     setAction(!action);
   };
+  const [gnbs] = useState([
+    { id: `gnb1`, title: `ABOUT` },
+    { id: `gnb2`, title: `PUBLISHING` },
+    { id: `gnb3`, title: `ART` },
+    { id: `gnb4`, title: `CONTACT` },
+  ]);
   const handelGnbClick = (event) => {
     event.preventDefault();
-    let target = this.getAttribute("href");
-    let targetPos = document.querySelector(target).offsetTop;
-    window.scrollTo({ top: targetPos, behavior: "smooth" });
-    document.querySelector(".MMENU").classList.remove("active");
-    document.querySelector(".mobile_wrap").classList.remove("active");
+    const target = event.currentTarget.getAttribute("href");
+    let targetEl = document.querySelector(target);
+    if (targetEl) {
+      const targetPos = targetEl.offsetTop;
+      window.scrollTo({ top: targetPos, behavior: "smooth" });
+    }
+    setAction(false);
   };
 
   return (

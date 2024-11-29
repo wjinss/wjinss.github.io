@@ -1,6 +1,6 @@
 import "../styles/Art.css";
 
 const Art = () => {
-  return <section className="Art" id="Art"></section>;
+  return <section className="Art" id="ART"></section>;
 };
 export default Art;

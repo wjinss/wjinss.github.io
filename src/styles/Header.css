@@ -58,7 +58,7 @@
     transition: 0.2s;
   }
   .mobile_menu {
-    margin-top: 10px;
+    margin-top: 5px;
     width: 26px;
     height: 26px;
     position: relative;
@@ -67,7 +67,7 @@
 
   .mobile_wrap.active {
     left: 0;
-    /* height: 100vh; */
+    height: 100vh;
   }
   .mobile_wrap.active + .gnb_bg {
     display: block;

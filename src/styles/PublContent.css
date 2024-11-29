@@ -1,0 +1,7 @@
+.web_content {
+  width: 100%; /* 컨테이너 크기에 맞추어 설정 */
+  height: 300px; /* 원하는 높이 설정 */
+  background-size: cover; /* 이미지를 컨테이너에 맞게 조정 */
+  background-position: center; /* 이미지 중심으로 정렬 */
+  background-repeat: no-repeat;
+}

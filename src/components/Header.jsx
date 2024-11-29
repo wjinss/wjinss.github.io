@@ -19,7 +19,7 @@ const Header = () => {
     const target = event.currentTarget.getAttribute("href");
     let targetEl = document.querySelector(target);
     if (targetEl) {
-      const targetPos = targetEl.offsetTop;
+      const targetPos = targetEl.offsetTop - 55; //헤더의 높이값만큼 빼기;
       window.scrollTo({ top: targetPos, behavior: "smooth" });
     }
     setAction(false);

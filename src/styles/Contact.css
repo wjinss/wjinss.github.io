@@ -1,5 +1,134 @@
-.Contact {
+#CONTACT {
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  background: var(--bgColor);
+  .sec_in {
+    padding: 80px 0 0;
+  }
+}
+
+.contact_box {
+  background: url(../../public/images/contact_bg.png) no-repeat center top/cover;
+  padding: 20px 20px 80px;
+  border-radius: 20px;
+  h3 {
+    padding: 0;
+  }
+}
+.contact_wrap {
+  padding-top: 80px;
+}
+.contact_txt_wrap {
+  width: 85vw;
+  padding-bottom: 30px;
+}
+.con_tit {
+  word-break: keep-all;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  .pc_br {
+    display: block;
+  }
+}
+.con_txt {
+  margin-bottom: 15px;
+}
+
+.mail {
+  padding: 20px 0;
+  > span {
+    width: 20px;
+    height: 20px;
+    background: var(--mainColor);
+    border-radius: 50%;
+    margin-right: 15px;
+    padding: 2px 1px 0 0;
+    vertical-align: middle;
+    > img {
+      width: 80%;
+    }
+  }
+}
+.form_main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  > div {
+    position: relative;
+  }
+}
+.form {
   width: 100%;
-  height: 100vh;
-  background: blue;
+  height: 100%;
+  border-radius: 5px;
+  padding: min(1.17vw, 15px);
+  min-height: 40px;
+  background: #fff;
+}
+.label {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+  font-size: 1.8rem;
+  /* padding: min(1.17vw, 15px); */
+  pointer-events: none;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: red;
+}
+
+.textarea {
+  height: 20rem;
+  padding: 1.5rem 0 0 1rem;
+}
+.textLabel {
+  top: 8%;
+}
+.form:focus {
+  border: 1px solid var(--mainColor);
+}
+.form:is(:focus, :valid, :hover) .label {
+  transform: translateY(-200%) scale(0.7);
+  padding-inline: 0.3rem;
+  color: var(--mainColor);
+}
+
+.input-group {
+  font-size: 1.25rem;
+  position: relative;
+  --primary: #2196f3;
+}
+
+.input {
+  all: unset;
+  color: #fefefe;
+  padding: 1rem;
+  border: 1px solid #9e9e9e;
+  border-radius: 10px;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #d4d4d4;
+  pointer-events: none;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+  border: 1px solid var(--primary);
+}
+
+.input:is(:focus, :valid) ~ label {
+  transform: translateY(-120%) scale(0.7);
+  background-color: #1a1a1a;
+  padding-inline: 0.3rem;
+  color: var(--primary);
 }

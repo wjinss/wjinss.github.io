@@ -1,5 +1,7 @@
 import "../styles/Visual.css";
 import Particle from "./Particle";
+import visualImg from "../assets/visual.svg";
+import scrollIcon from "../assets/scorll_icon.svg";
 
 const Visual = () => {
   return (
@@ -13,10 +15,10 @@ const Visual = () => {
           </p>
         </div>
         <div className="visual_img">
-          <img src="../public/images/visual.svg" alt="비주얼 이미지" />
+          <img src={visualImg} alt="비주얼 이미지" />
         </div>
         <div className="scroll">
-          <img src="../public/images/scorll_icon.svg" alt="스크롤 해주세요" />
+          <img src={scrollIcon} alt="스크롤 해주세요" />
           <p>Scroll</p>
         </div>
       </div>

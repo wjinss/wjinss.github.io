@@ -1,6 +1,6 @@
 import "../styles/PublContent.css";
-import { getPublishingImage } from "../util/getPublishingImage.jsx";
-import { getToolsIcon } from "../util/getToolsIcon.jsx";
+import { getPublishingImage } from "../util/getPublishingImage.js";
+import { getToolsIcon } from "../util/getToolsIcon.js";
 
 const PublContent = (publ) => {
   console.log(publ);

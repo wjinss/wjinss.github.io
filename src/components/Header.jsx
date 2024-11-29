@@ -1,4 +1,5 @@
 import "../styles/Header.css";
+import logo from "../assets/logo.svg";
 import Button from "./Button";
 import { useState } from "react";
 
@@ -29,7 +30,7 @@ const Header = () => {
       <div className="in header_in">
         <h1 className="logo">
           <a href={"#Visual"}>
-            <img src="../public/images/logo.svg" alt="" />
+            <img src={logo} alt="정우진의 포트폴리오" />
           </a>
         </h1>
         <div className="mobile_menu">

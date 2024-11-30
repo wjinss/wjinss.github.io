@@ -86,32 +86,40 @@
   transition: 0.8s;
 }
 .web_logo {
-  margin-top: 20px;
+  margin-top: 15px;
   img {
     display: inline-block;
   }
 }
 
-.web_travel .web_logo {
-  width: 50%;
-}
-.web_disney .web_logo {
-  width: 25%;
-}
-.web_airbnb .web_logo {
-  width: 17%;
-}
-.web_sema .web_logo {
+.web_1 .web_logo {
   width: 30%;
   filter: invert(1);
 }
-.web_pottery .web_logo {
-  font-size: 2.2rem;
+.web_3 .web_logo {
+  width: 30%;
+  filter: brightness(180%);
 }
-.qrtxt {
-  font-size: 1.4rem;
-  color: #ff5a5f;
-  margin-top: 15px;
+.web_4 .web_logo {
+  width: 50%;
+}
+.web_5 .web_logo {
+  width: 15%;
+  position: relative;
+  &::after {
+    content: "코드를 스캔해주세요!";
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    color: #ff5a5f;
+    width: 250%;
+  }
+}
+.web_6 .web_logo {
+  filter: invert(1);
+  width: 50%;
 }
 .web_content:hover {
   .web_modal {

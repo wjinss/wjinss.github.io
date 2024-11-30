@@ -1,6 +1,6 @@
 const getPublishungContents = [
   {
-    id: 1,
+    id: Number(1),
     title: "서울시립미술관 메인페이지",
     explain: "소개: 서울시립미술관 반응형 메인페이지 리디자인",
     period: "기간: 디자인 2일, 코딩 4일",
@@ -11,7 +11,7 @@ const getPublishungContents = [
   },
   {
     id: 2,
-    title: "포트폴리오",
+    title: "개인 포트폴리오",
     explain: "소개: 반응형 웹 포트폴리오 제작",
     period: "기간: 디자인 4일, 코딩 6일",
     part: "기여도: 1인 작업",
@@ -60,3 +60,4 @@ const getPublishungContents = [
     logo: "",
   },
 ];
+export default getPublishungContents;

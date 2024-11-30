@@ -1,5 +1,4 @@
 import "../styles/PublContent.css";
-// import { getPublishingImage } from "../util/getPublishingImage.js";
 import { getToolsIcon } from "../util/getToolsIcon.js";
 
 const PublContent = ({
@@ -11,8 +10,9 @@ const PublContent = ({
   tools,
   href,
   logo,
-  className,
   src,
+  className,
+  qrtxt,
 }) => {
   return (
     <article
@@ -30,10 +30,10 @@ const PublContent = ({
             <li className="web_txt_list">{period}</li>
             <li className="web_txt_list">{part}</li>
             <li className="web_txt_list">
-              <div>
+              <div className="tool_wrap">
                 {tools.map((item, idx) => (
-                  <span key={idx}>
-                    <img src={getToolsIcon(item)} alt="" />
+                  <span key={idx} className="tool_icon">
+                    <img src={getToolsIcon(item)} alt="툴 아이콘" />
                   </span>
                 ))}
               </div>
@@ -41,10 +41,16 @@ const PublContent = ({
           </ul>
         </div>
         <div className="web_modal">
-          <a href={href} target="_blank" rel="noopener noreferrer">
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="web_link"
+          >
             사이트 바로가기
+            <span></span>
             <div className="web_logo">
-              <img src={logo} alt="" />
+              <img src={logo} alt="로고" />
             </div>
           </a>
         </div>

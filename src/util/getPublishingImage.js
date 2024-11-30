@@ -15,11 +15,11 @@ export function getPublishingImage(publishingId) {
     case 3:
       return "../assets/publishing_03.png";
     case 4:
-      return "../assets/publishing_04.png";
+      return "../assets/publishing_05.png";
     case 5:
       return "../assets/publishing_05.png";
     case 6:
-      return "../assets/publishing_06.png";
+      return "../assets/publishing_05.png";
     default:
       return defaultImage;
   }

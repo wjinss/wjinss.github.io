@@ -1,7 +1,132 @@
 .web_content {
-  width: 100%; /* 컨테이너 크기에 맞추어 설정 */
-  height: 300px; /* 원하는 높이 설정 */
-  background-size: cover; /* 이미지를 컨테이너에 맞게 조정 */
-  background-position: center; /* 이미지 중심으로 정렬 */
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  position: relative;
   background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.web_bg {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  position: relative;
+  background: linear-gradient(
+    to left,
+    rgba(1, 10, 9, 0.8) 0%,
+    rgba(1, 10, 9, 0.5) 75%,
+    rgba(1, 10, 9, 0) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  .web_txt_wrap {
+    transition: 0.15s;
+    position: relative;
+    top: 50%;
+    left: 30%;
+  }
+}
+
+.web_tit {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.web_txt_list {
+  margin-bottom: 7px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.tool_wrap {
+  margin-top: 15px;
+}
+.tool_icon {
+  margin-right: 5px;
+  > img {
+    width: 22px;
+  }
+}
+.web_modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  bottom: -100%;
+  left: 0;
+  transition: 0.5s;
+}
+.web_link {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.web_link > span {
+  opacity: 0;
+  width: 0%;
+  height: 1px;
+  display: block;
+  background: #fff;
+  margin: 10px auto 0;
+  transition: 0.8s;
+}
+.web_logo {
+  margin-top: 20px;
+  img {
+    display: inline-block;
+  }
+}
+
+.web_travel .web_logo {
+  width: 50%;
+}
+.web_disney .web_logo {
+  width: 25%;
+}
+.web_airbnb .web_logo {
+  width: 17%;
+}
+.web_sema .web_logo {
+  width: 30%;
+  filter: invert(1);
+}
+.web_pottery .web_logo {
+  font-size: 2.2rem;
+}
+.qrtxt {
+  font-size: 1.4rem;
+  color: #ff5a5f;
+  margin-top: 15px;
+}
+.web_content:hover {
+  .web_modal {
+    opacity: 1;
+    background: rgba(1, 10, 9, 0.9);
+    bottom: 0;
+    left: 0;
+  }
+  .web_link {
+    opacity: 1;
+    font-size: 2rem;
+  }
+  .web_link > span {
+    opacity: 1;
+    width: 90%;
+    margin: 20px auto 0;
+  }
 }

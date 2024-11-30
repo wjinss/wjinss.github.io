@@ -3,3 +3,9 @@
   height: 100vh;
   background: darkcyan;
 }
+.web_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

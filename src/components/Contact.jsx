@@ -20,7 +20,7 @@ const Contact = () => {
             </div>
             <div className="form_main">
               <p className="mail">
-                <span>{/* <img src="./images/mail_icon.svg" alt="" /> */}</span>
+                <span></span>
                 메일 보내기
               </p>
               <form
@@ -36,6 +36,7 @@ const Contact = () => {
                     id="from_name"
                     autoComplete="off"
                     className="form"
+                    required
                   />
                   <label className="label" htmlFor="from_name">
                     Name
@@ -48,6 +49,7 @@ const Contact = () => {
                     id="from_email"
                     autoComplete="off"
                     className="form"
+                    required
                   />
                   <label className="label" htmlFor="from_email">
                     Email
@@ -59,17 +61,13 @@ const Contact = () => {
                     id="from_message"
                     title="내용을 입력해주세요."
                     className="form textarea"
+                    required
                   ></textarea>
                   <label className="label textLabel" htmlFor="from_message">
                     Comments
                   </label>
                 </div>
                 <div>
-                  <button
-                    type="submit"
-                    name="submit"
-                    className="btn_send p_bold"
-                  ></button>
                   <Button
                     type={"submit"}
                     name={"submit"}

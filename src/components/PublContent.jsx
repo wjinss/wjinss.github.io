@@ -15,7 +15,7 @@ const PublContent = ({
   src,
 }) => {
   return (
-    <div
+    <article
       key={id}
       className={`web_content web_${className}`}
       style={{
@@ -49,7 +49,7 @@ const PublContent = ({
           </a>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 export default PublContent;

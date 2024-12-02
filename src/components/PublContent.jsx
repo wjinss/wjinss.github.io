@@ -44,7 +44,7 @@ const PublContent = ({
             rel="noopener noreferrer"
             className="web_link"
           >
-            사이트 바로가기
+            View more
             <span></span>
             <div className="web_logo">
               <img src={logo} alt="로고" />

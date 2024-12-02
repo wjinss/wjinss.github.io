@@ -4,6 +4,7 @@ import icon3 from "../assets/icon_js.svg";
 import icon4 from "../assets/icon_ps.svg";
 import icon5 from "../assets/icon_ai.svg";
 import icon6 from "../assets/icon_fig.svg";
+import icon7 from "../assets/icon_react.svg";
 
 export function getToolsIcon(iconId) {
   switch (iconId) {
@@ -19,6 +20,8 @@ export function getToolsIcon(iconId) {
       return icon5;
     case 6:
       return icon6;
+    case 7:
+      return icon7;
     default:
       return null;
   }

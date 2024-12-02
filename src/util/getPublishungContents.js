@@ -1,13 +1,12 @@
 const getPublishungContents = [
   {
-    id: Number(1),
+    id: 1,
     title: "서울시립미술관 메인페이지",
     explain: "소개: 서울시립미술관 반응형 메인페이지 리디자인",
     period: "기간: 디자인 2일, 코딩 4일",
     part: "기여도: 1인 작업",
     tools: [1, 2, 3, 6],
     href: "",
-    logo: "",
   },
   {
     id: 2,
@@ -17,7 +16,6 @@ const getPublishungContents = [
     part: "기여도: 1인 작업",
     tools: [1, 2, 3, 4, 5, 6],
     href: "",
-    logo: "",
   },
   {
     id: 3,
@@ -27,7 +25,6 @@ const getPublishungContents = [
     part: "기여도: 1인 작업",
     tools: [1, 2, 3, 4, 5],
     href: "",
-    logo: "",
   },
   {
     id: 4,
@@ -37,7 +34,6 @@ const getPublishungContents = [
     part: "기여도: 1인 작업",
     tools: [1, 2, 4, 5],
     href: "",
-    logo: "",
   },
   {
     id: 5,
@@ -47,7 +43,6 @@ const getPublishungContents = [
     part: "기여도: 디자인, 코딩 33%",
     tools: [1, 2, 4, 6],
     href: "",
-    logo: "",
   },
   {
     id: 6,
@@ -57,7 +52,6 @@ const getPublishungContents = [
     part: "기여도: 1인 작업",
     tools: [1, 2, 4],
     href: "",
-    logo: "",
   },
 ];
 export default getPublishungContents;

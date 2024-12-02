@@ -2,7 +2,6 @@ import "../styles/PublContent.css";
 import { getToolsIcon } from "../util/getToolsIcon.js";
 
 const PublContent = ({
-  id,
   title,
   explain,
   period,
@@ -12,11 +11,9 @@ const PublContent = ({
   logo,
   src,
   className,
-  qrtxt,
 }) => {
   return (
     <article
-      key={id}
       className={`web_content web_${className}`}
       style={{
         backgroundImage: src,

@@ -98,7 +98,7 @@
 }
 .web_3 .web_logo {
   width: 30%;
-  filter: brightness(180%);
+  filter: brightness(150%);
 }
 .web_4 .web_logo {
   width: 50%;
@@ -119,7 +119,7 @@
 }
 .web_6 .web_logo {
   filter: invert(1);
-  width: 50%;
+  width: 30%;
 }
 .web_content:hover {
   .web_modal {

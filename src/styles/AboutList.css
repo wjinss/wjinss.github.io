@@ -1,0 +1,19 @@
+.about_txt {
+  margin: max(3.13vw, 40px) 0 max(3.13vw, 40px);
+  .pro_tit {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  .pro_body {
+    word-break: keep-all;
+    margin-top: 10px;
+  }
+  .txt_sub {
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin-top: 5px;
+    display: block;
+  }
+}

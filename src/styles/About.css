@@ -1,7 +1,33 @@
-.About {
-  width: 100%;
-  height: 100vh;
-  background: #acacac;
+#ABOUT {
+  background: url(/public/images/profile_bg.png) no-repeat center bottom / cover;
   position: relative;
   z-index: 1;
+}
+.about_bg {
+  background: linear-gradient(
+    rgba(1, 10, 9, 0.9) 0%,
+    rgba(1, 10, 9, 0.7) 70%,
+    rgba(1, 10, 9, 0) 100%
+  );
+}
+.about_wrap {
+  padding-top: 50px;
+}
+.about_tit {
+  .name_ko {
+    font-size: 2.2rem;
+  }
+  .name_en {
+    margin: 5px 0 30px;
+    color: #cdcdcd;
+  }
+}
+.about_img {
+  width: 230px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+  }
 }

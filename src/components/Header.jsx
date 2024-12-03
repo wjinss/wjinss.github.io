@@ -11,8 +11,9 @@ const Header = () => {
   const [gnbs] = useState([
     { id: `gnb1`, title: `ABOUT` },
     { id: `gnb2`, title: `PUBLISHING` },
-    { id: `gnb3`, title: `ART` },
-    { id: `gnb4`, title: `CONTACT` },
+    { id: `gnb3`, title: `DESIGN` },
+    { id: `gnb4`, title: `CODING EXAMPLE` },
+    { id: `gnb5`, title: `CONTACT` },
   ]);
   const handelGnbClick = (event) => {
     event.preventDefault();

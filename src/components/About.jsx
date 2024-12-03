@@ -9,9 +9,7 @@ const About = () => {
     <section className="About" id="ABOUT">
       <div className="about_bg">
         <div className="in sec_in">
-          <h3>
-            ABOUT<span className="maincolor">ME</span>
-          </h3>
+          <h3>ABOUT ME</h3>
           <div className="about_wrap">
             <div className="about_tit">
               <p className="name_ko p_bold">정우진</p>

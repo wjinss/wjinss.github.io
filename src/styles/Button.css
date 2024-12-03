@@ -19,7 +19,6 @@
   transform: rotate(45deg);
 }
 .Button_MMENU.active .burger:nth-of-type(2) {
-  transform: translateX(200px);
   opacity: 0;
 }
 .Button_MMENU.active .burger:nth-of-type(3) {

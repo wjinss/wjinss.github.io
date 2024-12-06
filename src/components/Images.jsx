@@ -2,7 +2,7 @@ import "../styles/images.css";
 
 const Images = ({ caption, src }) => {
   return (
-    <div className="Images">
+    <article className="Images">
       <figure>
         <img src={src} alt={caption} />
       </figure>
@@ -11,7 +11,7 @@ const Images = ({ caption, src }) => {
           <h5>{caption}</h5>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

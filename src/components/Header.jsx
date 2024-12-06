@@ -12,7 +12,7 @@ const Header = () => {
     { id: `gnb1`, title: `ABOUT` },
     { id: `gnb2`, title: `PUBLISHING` },
     { id: `gnb3`, title: `DESIGN` },
-    { id: `gnb4`, title: `CODING EXAMPLE` },
+    { id: `gnb4`, title: `CODING` },
     { id: `gnb5`, title: `CONTACT` },
   ]);
   const handelGnbClick = (event) => {

@@ -3,6 +3,7 @@ import Visual from "./Visual";
 import About from "./About";
 import Publishing from "./Publishing";
 import Design from "./Design";
+import Coding from "./Coding";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Button from "./Button";
@@ -23,6 +24,7 @@ const Layout = () => {
         <About />
         <Publishing />
         <Design />
+        <Coding />
         <Contact />
       </div>
       <Footer />

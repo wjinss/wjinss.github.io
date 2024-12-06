@@ -22,7 +22,7 @@ const Design = () => {
               delay: 6000,
               disableOnInteraction: false,
             }}
-            // mousewheel={true}
+            mousewheel={false}
             className="mySwiper"
             modules={[Mousewheel, Autoplay]}
           >

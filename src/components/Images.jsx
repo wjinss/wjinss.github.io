@@ -1,8 +1,8 @@
 import "../styles/images.css";
 
-const Images = ({ caption, src }) => {
+const Images = ({ caption, src, onClick }) => {
   return (
-    <article className="Images">
+    <article className="Images" onClick={onClick}>
       <figure>
         <img src={src} alt={caption} />
       </figure>

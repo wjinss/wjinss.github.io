@@ -6,7 +6,7 @@ import Images from "./images";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Coding = () => {
+const Coding = ({ openModal }) => {
   const horizontalScrollRef = useRef(null);
   const codingBoxRef = useRef([]);
 

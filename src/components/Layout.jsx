@@ -29,13 +29,6 @@ const Layout = () => {
       </div>
       <Footer />
       <Button className={"TOP"} onClick={handleTopClick} />
-      {/* <div className="modal">
-        <figure>
-          <div className="modal_image">
-            <img src={``} alt="" />
-          </div>
-        </figure>
-      </div> */}
     </div>
   );
 };

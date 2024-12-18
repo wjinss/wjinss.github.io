@@ -1,0 +1,30 @@
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(42, 42, 42, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal_content {
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  overflow-y: auto;
+  p {
+    text-align: center;
+    font-size: 2rem;
+    color: #fafafa;
+    margin-bottom: 40px;
+  }
+  img {
+    max-width: 900px;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+}

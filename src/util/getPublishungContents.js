@@ -6,7 +6,7 @@ const getPublishungContents = [
     period: "기간: 디자인 2일, 코딩 4일",
     part: "기여도: 1인 작업",
     tools: [1, 2, 3, 6],
-    href: "",
+    href: "http://aastu4343.dothome.co.kr/web_contents/sema/index.html",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const getPublishungContents = [
     period: "기간: 디자인 4일, 코딩 6일",
     part: "기여도: 1인 작업",
     tools: [7, 4, 5, 6],
-    href: "",
+    href: "#",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const getPublishungContents = [
     period: "기간: 디자인 1일, 코딩 3일",
     part: "기여도: 1인 작업",
     tools: [1, 2, 3, 4, 5],
-    href: "",
+    href: "http://aastu4343.dothome.co.kr/web_contents/diseny_plus/index.html",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const getPublishungContents = [
     period: "기간: 디자인 1일, 코딩 2일",
     part: "기여도: 1인 작업",
     tools: [1, 2, 4, 5],
-    href: "",
+    href: "http://aastu4343.dothome.co.kr/web_contents/travel_wallet/index.html",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const getPublishungContents = [
     period: "기간: 디자인 7일, 코딩 7일",
     part: "기여도: 디자인, 코딩 33%",
     tools: [1, 2, 4, 6],
-    href: "",
+    href: "http://aastu4343.dothome.co.kr/web_contents/airnbnb/index.html",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const getPublishungContents = [
     period: "기간: 디자인 2일, 코딩 2일",
     part: "기여도: 1인 작업",
     tools: [1, 2, 4],
-    href: "",
+    href: "http://aastu4343.dothome.co.kr/web_contents/pottery/index.html",
   },
 ];
 export default getPublishungContents;

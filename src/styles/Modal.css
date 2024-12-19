@@ -8,13 +8,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 9999;
 }
 
 .modal_content {
   max-width: 90vw;
   max-height: 90vh;
   position: relative;
+  text-align: center;
+  margin: 0 auto;
   overflow-y: auto;
   p {
     text-align: center;
@@ -22,9 +24,20 @@
     color: #fafafa;
     margin-bottom: 40px;
   }
+}
+
+.DESIGN_modal {
   img {
+    width: 100%;
     max-width: 900px;
-    height: 100%;
+    height: auto;
     margin-bottom: 10px;
+  }
+}
+.CODING_modal {
+  iframe {
+    width: 70vw;
+    height: 90vh;
+    border: none;
   }
 }

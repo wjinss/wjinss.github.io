@@ -1,12 +1,12 @@
 import "../styles/images.css";
 
-const Images = ({ caption, src, onClick }) => {
+const Images = ({ caption, src, onClick, className }) => {
   return (
-    <article className="Images" onClick={onClick}>
+    <article className={`${className}_layout Images`} onClick={onClick}>
       <figure>
         <img src={src} alt={caption} />
       </figure>
-      <div className="images_hover design_hover">
+      <div className={`${className}_hover`}>
         <div>
           <h5>{caption}</h5>
         </div>

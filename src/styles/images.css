@@ -1,6 +1,9 @@
 .Images {
   cursor: pointer;
   position: relative;
+}
+
+.DESIGN_layout {
   figure {
     overflow: hidden;
     border-radius: 5px;
@@ -11,9 +14,10 @@
   }
 }
 
-.design_hover {
+.DESIGN_hover {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(27, 27, 27, 0.8);
@@ -29,13 +33,86 @@
     transform: translate(-50%, -50%);
   }
 }
-.Images:hover {
-  .design_hover {
+
+.CODING_layout {
+  width: 25vw;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid var(--mainColor);
+  position: relative;
+  figure {
+    margin: 6vh 0;
+    border-radius: 5px;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+.CODING_layout::after {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  color: var(--mainColor);
+  font-size: 2rem;
+}
+.CODING_layout:nth-child(1):after {
+  content: "01";
+}
+.CODING_layout:nth-child(2):after {
+  content: "02";
+}
+.CODING_layout:nth-child(3):after {
+  content: "03";
+}
+.CODING_layout:nth-child(4):after {
+  content: "04";
+}
+.CODING_layout:nth-child(5):after {
+  content: "05";
+}
+.CODING_layout:nth-child(6):after {
+  content: "06";
+}
+.CODING_layout:nth-child(7):after {
+  content: "07";
+}
+.CODING_layout:nth-child(8):after {
+  content: "08";
+}
+
+.CODING_hover {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.35s ease-in;
+  z-index: 1000;
+  h5 {
+    font-size: 1.6rem;
+    word-break: keep-all;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.DESIGN_layout:hover {
+  .DESIGN_hover {
     top: 200%;
     transition: all 0.3s ease-out;
   }
   img {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: all 0.4s;
+  }
+}
+.CODING_layout:hover {
+  .CODING_hover {
+    top: 70%;
+    transition: all 0.3s ease-out;
   }
 }

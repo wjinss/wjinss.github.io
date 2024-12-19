@@ -31,7 +31,7 @@ const Design = () => {
           <h3>DESIGN</h3>
           <div className="slide_design">
             <Swiper
-              slidesPerView={1.5}
+              slidesPerView={4}
               centeredSlides={true}
               spaceBetween={30}
               loop={true}
@@ -48,6 +48,7 @@ const Design = () => {
                   <Images
                     src={image.src}
                     caption={image.caption}
+                    className={`DESIGN`}
                     onClick={() => openModal(image.src, image.caption)}
                   />
                 </SwiperSlide>
@@ -56,7 +57,7 @@ const Design = () => {
           </div>
           <div className="slide_design">
             <Swiper
-              slidesPerView={1.5}
+              slidesPerView={4}
               centeredSlides={true}
               spaceBetween={30}
               loop={true}
@@ -72,6 +73,7 @@ const Design = () => {
                   <Images
                     src={image.src}
                     caption={image.caption}
+                    className={`DESIGN`}
                     onClick={() => openModal(image.design, image.caption)}
                   />
                 </SwiperSlide>
@@ -80,7 +82,7 @@ const Design = () => {
           </div>
         </div>
       </section>
-      <Modal isOpen={isOpen} onClose={closeModal}>
+      <Modal isOpen={isOpen} onClose={closeModal} className={"DESIGN"}>
         <p>{modalContent.caption}</p>
         <img src={modalContent.src} alt={modalContent.caption} />
       </Modal>

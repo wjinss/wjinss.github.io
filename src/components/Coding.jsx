@@ -3,72 +3,82 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef, useEffect, useState } from "react";
 import Images from "./images";
+import Modal from "./Modal";
+import codingList from "../util/codingList";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Coding = ({ openModal }) => {
+const Coding = () => {
+  const [codings] = useState(codingList);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({ src: "", caption: "" });
+
+  const openModal = (src, caption) => {
+    setModalContent({ src, caption });
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setModalContent({ src: "", caption: "" });
+  };
   const horizontalScrollRef = useRef(null);
-  const codingBoxRef = useRef([]);
+  const contentWrapperRef = useRef(null);
 
   useEffect(() => {
-    const horizontalScroll = horizontalScrollRef.current;
-    const codingBox = codingBoxRef.current;
+    const section = horizontalScrollRef.current;
+    const contentWrapper = contentWrapperRef.current;
 
-    if (horizontalScroll && codingBox.length > 0) {
-      const totalWidth =
-        codingBox.length * codingBox[0].getBoundingClientRect().width;
-      ScrollTrigger.create({
-        trigger: horizontalScroll,
-        start: `top-=80px`,
-        end: `+=${totalWidth - window.innerWidth}`,
+    const horizontalScrollLength =
+      contentWrapper.scrollWidth - section.offsetWidth;
+
+    gsap.to(contentWrapper, {
+      x: -horizontalScrollLength,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: () => `+=${horizontalScrollLength}`,
+        scrub: true,
         pin: true,
-        scrub: 1,
-        onUpdate: (self) => {
-          const scrollAmount = self.progress * (totalWidth - window.innerWidth);
-          gsap.to(codingBox, {
-            x: -scrollAmount,
-            ease: "linear",
-            overwrite: true,
-            duration: 0.1,
-          });
-        },
-      });
-    }
+      },
+    });
+
+    return () => {
+      ScrollTrigger.kill();
+    };
   }, []);
 
   return (
-    <section className="Coding" id="CODING" ref={horizontalScrollRef}>
-      <div className="coding_wrap">
-        <div className="coding_title">
-          <h3>CODING EXAMPLE</h3>
+    <>
+      <section className="Coding" id="CODING" ref={horizontalScrollRef}>
+        <div className="coding_wrap">
+          <div className="coding_title">
+            <h3>CODING EXAMPLE</h3>
+          </div>
+          <div className="coding_contents" ref={contentWrapperRef}>
+            {codings.map((content) => (
+              <Images
+                key={content.id}
+                src={content.thum}
+                caption={content.caption}
+                className={`CODING`}
+                onClick={() => openModal(content.src, content.caption)}
+              />
+            ))}
+          </div>
         </div>
-        <div className="coding_contents">
-          {[
-            "page1",
-            "page2",
-            "page3",
-            "page4",
-            "page5",
-            "page6",
-            "page7",
-            "page8",
-          ].map((content, index) => (
-            <Images
-              src={""}
-              caption={""}
-              style={{ whiteSpace: "nowrap" }}
-              key={index}
-              className="coding_box"
-              ref={(el) => {
-                if (el && !codingBoxRef.current.includes(el)) {
-                  codingBoxRef.current.push(el);
-                }
-              }}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+      <Modal isOpen={isOpen} onClose={closeModal} className={"CODING"}>
+        <p>{modalContent.caption}</p>
+        <iframe
+          src={modalContent.src}
+          title={modalContent.caption}
+          allow="fullscreen"
+        />
+      </Modal>
+    </>
   );
 };
 

@@ -31,7 +31,7 @@ const Design = () => {
           <h3>DESIGN</h3>
           <div className="slide_design">
             <Swiper
-              slidesPerView={4}
+              slidesPerView={1.5}
               centeredSlides={true}
               spaceBetween={30}
               loop={true}
@@ -39,9 +39,28 @@ const Design = () => {
                 delay: 6000,
                 disableOnInteraction: false,
               }}
-              mousewheel={false}
               className="mySwiper"
-              modules={[Mousewheel, Autoplay]}
+              modules={[Autoplay]}
+              breakpoints={{
+                600: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 30,
+                },
+                780: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 40,
+                },
+                1080: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 50,
+                  centeredSlides: false,
+                },
+                1280: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 50,
+                  centeredSlides: false,
+                },
+              }}
             >
               {images.map((image) => (
                 <SwiperSlide key={image.id} className="art_slide">
@@ -57,7 +76,7 @@ const Design = () => {
           </div>
           <div className="slide_design">
             <Swiper
-              slidesPerView={4}
+              slidesPerView={1.5}
               centeredSlides={true}
               spaceBetween={30}
               loop={true}
@@ -66,7 +85,27 @@ const Design = () => {
                 disableOnInteraction: false,
               }}
               className="mySwiper"
-              modules={[Mousewheel, Autoplay]}
+              modules={[Autoplay]}
+              breakpoints={{
+                600: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 30,
+                },
+                780: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 40,
+                },
+                1080: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 50,
+                  centeredSlides: false,
+                },
+                1280: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 50,
+                  centeredSlides: false,
+                },
+              }}
             >
               {imagesWeb.map((image) => (
                 <SwiperSlide key={image.id} className="art_slide">

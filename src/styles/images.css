@@ -24,7 +24,8 @@
   overflow: hidden;
   transition: 0.35s ease-in;
   h5 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
     word-break: keep-all;
     text-align: center;
     position: absolute;
@@ -35,7 +36,8 @@
 }
 
 .CODING_layout {
-  width: 25vw;
+  width: 100vw;
+  max-width: 400px;
   height: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -112,7 +114,80 @@
 }
 .CODING_layout:hover {
   .CODING_hover {
-    top: 70%;
+    top: 78%;
     transition: all 0.3s ease-out;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .DESIGN_hover {
+    h5 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .CODING_layout {
+    width: 70vw;
+    max-width: 350px;
+    figure {
+      margin: 8vh 0;
+    }
+  }
+  .CODING_hover {
+    top: 85%;
+    h5 {
+      font-size: 1.6rem;
+    }
+  }
+  .CODING_layout:hover {
+    .CODING_hover {
+      top: 80%;
+    }
+  }
+}
+@media screen and (min-width: 780px) {
+  .DESIGN_hover {
+    h5 {
+      font-size: 1.8rem;
+    }
+  }
+  .CODING_hover {
+    top: 88%;
+    h5 {
+      font-size: 1.8rem;
+    }
+  }
+  .CODING_layout {
+    width: 40vw;
+    max-width: 320px;
+    figure {
+      margin: 10vh 0;
+    }
+  }
+  .CODING_layout:hover {
+    .CODING_hover {
+      top: 83%;
+    }
+  }
+}
+@media screen and (min-width: 1080px) {
+  .CODING_layout {
+    width: 33vw;
+    figure {
+      margin: 8vh 0;
+    }
+  }
+  .CODING_layout:hover {
+    .CODING_hover {
+      top: 75%;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .CODING_layout {
+    width: 30vw;
+    figure {
+      margin: 6vh 0;
+    }
   }
 }

@@ -138,3 +138,146 @@
     margin: 20px auto 0;
   }
 }
+@media screen and (min-width: 600px) {
+  .web_bg {
+    padding: 20px 10px;
+    .web_txt_wrap {
+      top: 0%;
+      left: 55%;
+      width: 50%;
+      transform: translateY(0);
+    }
+  }
+  .web_1 .web_logo {
+    width: 45%;
+  }
+  .web_3 .web_logo {
+    width: 15%;
+  }
+  .web_5 .web_logo {
+    width: 10%;
+  }
+  .web_6 .web_logo {
+    width: 25%;
+  }
+  .tool_icon {
+    margin-right: 10px;
+    > img {
+      width: 35px;
+    }
+  }
+}
+@media screen and (min-width: 780px) {
+  .web_content {
+    width: 50%;
+    height: 35vh;
+    max-height: 260px;
+  }
+  .web_bg {
+    padding: 20px 10px;
+    .web_txt_wrap {
+      top: 40%;
+      left: 50%;
+      width: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .web_tit {
+    font-size: 1.4rem;
+  }
+  .web_3 .web_logo {
+    width: 30%;
+  }
+  .web_5 .web_logo {
+    width: 20%;
+  }
+  .web_6 .web_logo {
+    width: 35%;
+  }
+  .tool_icon {
+    margin: 10px 0 0 10px;
+    img {
+      width: 25px;
+    }
+  }
+}
+@media screen and (min-width: 1080px) {
+  .web_content {
+    height: 33vh;
+    font-size: 1.6rem;
+    max-height: 500px;
+  }
+  .web_bg {
+    padding: 20px;
+    .web_txt_wrap {
+      left: 50%;
+      width: 50%;
+      ul > li {
+        word-break: keep-all;
+      }
+    }
+  }
+  .web_logo {
+    margin-top: 20px;
+  }
+  .web_1 .web_logo {
+    width: 30%;
+  }
+  .web_2 .web_logo {
+    width: 25%;
+  }
+  .web_3 .web_logo {
+    width: 28%;
+  }
+  .web_4 .web_logo {
+    width: 30%;
+  }
+  .web_5 .web_logo {
+    width: 15%;
+  }
+  .web_6 .web_logo {
+    width: 30%;
+  }
+  .web_tit {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .web_txt_list {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .tool_wrap {
+    margin-top: 15px;
+  }
+  .tool_icon {
+    margin-right: 10px;
+    > img {
+      width: 30px;
+    }
+  }
+  .web_link {
+    font-size: 2rem;
+  }
+  .web_content:hover {
+    .web_link {
+      font-size: 2.4rem;
+    }
+    .web_link > span {
+      margin: 30px auto 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .web_content {
+    height: 30vh;
+  }
+  .web_bg {
+    padding: 20px;
+    .web_txt_wrap {
+      top: 50%;
+      left: 55%;
+      width: 50%;
+    }
+  }
+}

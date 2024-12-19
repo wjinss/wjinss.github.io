@@ -5,7 +5,7 @@
   background-color: var(--bgColor);
   z-index: 1;
   display: flex;
-  padding: 130px 0 100px;
+  /* padding: 130px 0 100px; */
   overflow: hidden;
   .coding_wrap {
     display: flex;
@@ -24,10 +24,37 @@
   .coding_contents {
     width: max-content;
     padding: 15vh 50vw 0 0;
+    margin-bottom: 15vh;
     height: 100%;
     display: flex;
     flex: 1;
     flex-wrap: nowrap;
     overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .Coding {
+    .coding_title {
+      width: 25vw;
+    }
+    .coding_contents {
+      padding: 10vh 50vw 10vh 0;
+      margin-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: 780px) {
+  .Coding {
+    .coding_contents {
+      padding: 80px 25vw 80px 0;
+    }
+  }
+}
+@media screen and (min-width: 1080px) {
+  .Coding {
+    .coding_contents {
+      padding: 100px 25vw 100px 0;
+    }
   }
 }

@@ -1,10 +1,8 @@
 #DESIGN {
   width: 100%;
   max-width: 1900px;
-  height: 100%;
   position: relative;
   background: var(--bgColor);
-  z-index: 1;
   h3 {
     margin-bottom: 50px;
     padding: 0 30px;

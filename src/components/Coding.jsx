@@ -52,7 +52,7 @@ const Coding = () => {
 
   return (
     <>
-      <section className="Coding" id="CODING" ref={horizontalScrollRef}>
+      <section className="Coding sec_in" id="CODING" ref={horizontalScrollRef}>
         <div className="coding_wrap">
           <div className="coding_title">
             <h3>CODING EXAMPLE</h3>

@@ -10,7 +10,7 @@ const Contact = () => {
           <div className="contact_wrap">
             <div className="contact_txt_wrap">
               <p className="con_tit p_bold">
-                소통을 기반으로 배우면서 성장하는{" "}
+                소통을 기반으로 배우면서 성장하는_
                 <span className="pc_br">
                   웹 퍼블리셔가 필요하시면 메일을 보내주세요!
                 </span>

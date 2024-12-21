@@ -73,3 +73,41 @@
     display: block;
   }
 }
+
+@media screen and (min-width: 1080px) {
+  .Header {
+    padding: 10px 0;
+    .mobile_wrap {
+      position: static;
+      width: 55%;
+      height: auto;
+      padding: 0px;
+      background: transparent;
+    }
+    .gnb {
+      display: flex;
+      justify-content: space-between;
+    }
+    .gnb li {
+      margin-bottom: 0px;
+      .gnb_link {
+        padding: 10px;
+        font-size: 1.6rem;
+        &:hover {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    .gnb_bg {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+    }
+    .mobile_menu {
+      display: none;
+    }
+  }
+}

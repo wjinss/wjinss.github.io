@@ -5,7 +5,6 @@
   background-color: var(--bgColor);
   z-index: 1;
   display: flex;
-  /* padding: 130px 0 100px; */
   overflow: hidden;
   .coding_wrap {
     display: flex;
@@ -52,7 +51,7 @@
   }
 }
 @media screen and (min-width: 1080px) {
-  .Coding {
+  #CODING {
     .coding_contents {
       padding: 100px 25vw 100px 0;
     }

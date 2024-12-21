@@ -15,12 +15,12 @@ const Header = () => {
     { id: `gnb4`, title: `CODING` },
     { id: `gnb5`, title: `CONTACT` },
   ]);
-  const handelGnbClick = (event) => {
-    event.preventDefault();
-    const target = event.currentTarget.getAttribute("href");
+  const handleGnbClick = (e) => {
+    e.preventDefault();
+    const target = e.currentTarget.getAttribute("href");
     let targetEl = document.querySelector(target);
     if (targetEl) {
-      const targetPos = targetEl.offsetTop - 55; //헤더의 높이값만큼 빼기;
+      const targetPos = targetEl.offsetTop - 55;
       window.scrollTo({ top: targetPos, behavior: "smooth" });
     }
     setAction(false);
@@ -53,7 +53,7 @@ const Header = () => {
                 <a
                   className="gnb_link"
                   href={`#${gnb.title}`}
-                  onClick={handelGnbClick}
+                  onClick={handleGnbClick}
                 >
                   {gnb.title}
                 </a>

@@ -7,6 +7,7 @@ import Images from "./images";
 import "swiper/css";
 import { Mousewheel, Autoplay } from "swiper/modules";
 import Modal from "./Modal";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Design = () => {
   const [images] = useState(imageList);
@@ -16,13 +17,19 @@ const Design = () => {
   const [modalContent, setModalContent] = useState({ src: "", caption: "" });
 
   const openModal = (src, caption) => {
+    ScrollTrigger.getAll().forEach((trigger) => trigger.disable());
+
     setModalContent({ src, caption });
     setIsOpen(true);
   };
 
-  const closeModal = () => {
+  const closeModal = (e) => {
+    e.preventDefault();
     setIsOpen(false);
     setModalContent({ src: "", caption: "" });
+    const scrollY = window.scrollY;
+    ScrollTrigger.getAll().forEach((trigger) => trigger.enable());
+    window.scrollTo(0, scrollY);
   };
   return (
     <>
@@ -35,12 +42,12 @@ const Design = () => {
               centeredSlides={true}
               spaceBetween={30}
               loop={true}
-              autoplay={{
-                delay: 6000,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 6000,
+              //   disableOnInteraction: false,
+              // }}
               className="mySwiper"
-              modules={[Autoplay]}
+              // modules={[Autoplay]}
               breakpoints={{
                 600: {
                   slidesPerView: 2.5,
@@ -80,12 +87,12 @@ const Design = () => {
               centeredSlides={true}
               spaceBetween={30}
               loop={true}
-              autoplay={{
-                delay: 6000,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 6000,
+              //   disableOnInteraction: false,
+              // }}
               className="mySwiper"
-              modules={[Autoplay]}
+              // modules={[Autoplay]}
               breakpoints={{
                 600: {
                   slidesPerView: 2.5,

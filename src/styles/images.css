@@ -1,12 +1,15 @@
 .Images {
   cursor: pointer;
   position: relative;
+  img {
+    object-fit: cover;
+  }
 }
 
 .DESIGN_layout {
   figure {
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 10px;
   }
   img {
     max-width: 100%;
@@ -23,6 +26,7 @@
   background-color: rgba(27, 27, 27, 0.8);
   overflow: hidden;
   transition: 0.35s ease-in;
+  border-radius: 10px;
   h5 {
     font-size: 1.4rem;
     line-height: 1.5;
@@ -35,7 +39,7 @@
   }
 }
 
-.CODING_layout {
+.coding_layout {
   width: 100vw;
   max-width: 400px;
   height: 100%;
@@ -52,39 +56,39 @@
     display: block;
   }
 }
-.CODING_layout::after {
+.coding_layout::after {
   position: absolute;
   left: 3%;
   top: 3%;
   color: var(--mainColor);
   font-size: 2rem;
 }
-.CODING_layout:nth-child(1):after {
+.coding_layout:nth-child(1):after {
   content: "01";
 }
-.CODING_layout:nth-child(2):after {
+.coding_layout:nth-child(2):after {
   content: "02";
 }
-.CODING_layout:nth-child(3):after {
+.coding_layout:nth-child(3):after {
   content: "03";
 }
-.CODING_layout:nth-child(4):after {
+.coding_layout:nth-child(4):after {
   content: "04";
 }
-.CODING_layout:nth-child(5):after {
+.coding_layout:nth-child(5):after {
   content: "05";
 }
-.CODING_layout:nth-child(6):after {
+.coding_layout:nth-child(6):after {
   content: "06";
 }
-.CODING_layout:nth-child(7):after {
+.coding_layout:nth-child(7):after {
   content: "07";
 }
-.CODING_layout:nth-child(8):after {
+.coding_layout:nth-child(8):after {
   content: "08";
 }
 
-.CODING_hover {
+.coding_hover {
   position: absolute;
   top: 85%;
   left: 0;
@@ -112,8 +116,8 @@
     transition: all 0.4s;
   }
 }
-.CODING_layout:hover {
-  .CODING_hover {
+.coding_layout:hover {
+  .coding_hover {
     top: 78%;
     transition: all 0.3s ease-out;
   }
@@ -126,21 +130,21 @@
     }
   }
 
-  .CODING_layout {
+  .coding_layout {
     width: 70vw;
     max-width: 350px;
     figure {
       margin: 8vh 0;
     }
   }
-  .CODING_hover {
+  .coding_hover {
     top: 85%;
     h5 {
       font-size: 1.6rem;
     }
   }
-  .CODING_layout:hover {
-    .CODING_hover {
+  .coding_layout:hover {
+    .coding_hover {
       top: 80%;
     }
   }
@@ -151,40 +155,40 @@
       font-size: 1.8rem;
     }
   }
-  .CODING_hover {
+  .coding_hover {
     top: 88%;
     h5 {
       font-size: 1.8rem;
     }
   }
-  .CODING_layout {
+  .coding_layout {
     width: 40vw;
     max-width: 320px;
     figure {
       margin: 10vh 0;
     }
   }
-  .CODING_layout:hover {
-    .CODING_hover {
+  .coding_layout:hover {
+    .coding_hover {
       top: 83%;
     }
   }
 }
 @media screen and (min-width: 1080px) {
-  .CODING_layout {
+  .coding_layout {
     width: 33vw;
     figure {
       margin: 8vh 0;
     }
   }
-  .CODING_layout:hover {
-    .CODING_hover {
+  .coding_layout:hover {
+    .coding_hover {
       top: 75%;
     }
   }
 }
 @media screen and (min-width: 1280px) {
-  .CODING_layout {
+  .coding_layout {
     width: 30vw;
     figure {
       margin: 6vh 0;

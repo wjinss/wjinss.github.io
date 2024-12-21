@@ -18,6 +18,10 @@
   text-align: center;
   margin: 0 auto;
   overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   p {
     text-align: center;
     font-size: 2rem;
@@ -34,9 +38,9 @@
     margin-bottom: 10px;
   }
 }
-.CODING_modal {
+.coding_modal {
   iframe {
-    width: 70vw;
+    width: 80vw;
     height: 90vh;
     border: none;
   }

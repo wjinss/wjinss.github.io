@@ -11,6 +11,12 @@ body {
   font-size: 1.6rem;
   color: #fff;
   line-height: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body.no_scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 h1,
 h2,

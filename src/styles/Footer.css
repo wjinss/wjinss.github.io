@@ -14,3 +14,9 @@
 .cpr {
   margin-top: 10px;
 }
+
+@media screen and (min-width: 1080px) {
+  #footer {
+    font-size: 1.4rem;
+  }
+}

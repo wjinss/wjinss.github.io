@@ -17,3 +17,43 @@
     display: block;
   }
 }
+
+@media screen and (min-width: 600px) {
+  .about_txt {
+    .pro_tit {
+      font-size: 2rem;
+    }
+    .pro_body {
+      font-size: 1.8rem;
+    }
+  }
+}
+@media screen and (min-width: 780px) {
+  .about_txt {
+    width: 50%;
+    .pro_tit {
+      font-size: 2.2rem;
+    }
+    .pro_body {
+      font-size: 1.8rem;
+    }
+    .txt_sub {
+      font-size: 1.6rem;
+    }
+  }
+}
+@media screen and (min-width: 1080px) {
+  .about_txt {
+    .pro_tit {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+    .pro_body {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    .txt_sub {
+      font-size: 1.4rem;
+    }
+  }
+}

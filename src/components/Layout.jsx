@@ -7,20 +7,22 @@ import Coding from "./Coding";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Button from "./Button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Layout = () => {
   const [vw, setVw] = useState(window.innerWidth);
+  const btnTopRef = useRef(null);
+  const contactRef = useRef(null);
   const delay = 200;
-  let timer = null;
+  const timerRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
       setVw(window.innerWidth);
 
-      clearTimeout(timer);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      timer = setTimeout(() => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+      timerRef.current = setTimeout(() => {
         if (vw >= 1100) {
           const header = document.querySelector(".Header");
           const mobileWrap = document.querySelector(".mobile_wrap");
@@ -37,18 +39,34 @@ const Layout = () => {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, [vw]);
 
-  const style = {
-    position: "relative",
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const scroll = window.scrollY;
+
+      if (btnTopRef.current && contactRef.current) {
+        const contactTop =
+          contactRef.current.getBoundingClientRect().top + window.scrollY;
+        btnTopRef.current.classList.toggle("active", scroll >= contactTop);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleTopClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className="Layout bgcolor" style={style}>
+    <div className="Layout bgcolor">
       <Header />
       <div id="container">
         <Visual />
@@ -56,10 +74,10 @@ const Layout = () => {
         <Publishing />
         <Design />
         <Coding />
-        <Contact />
+        <Contact ref={contactRef} />
       </div>
       <Footer />
-      <Button className={"TOP"} onClick={handleTopClick} />
+      <Button className={"TOP"} ref={btnTopRef} onClick={handleTopClick} />
     </div>
   );
 };

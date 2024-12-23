@@ -1,9 +1,10 @@
 import "../styles/Contact.css";
 import Button from "./Button";
+import { forwardRef } from "react";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   return (
-    <section className="contact" id="CONTACT">
+    <section className="Contact" id="CONTACT" ref={ref}>
       <div className="sec_in">
         <div className="contact_box">
           <h3>CONTACT</h3>
@@ -84,5 +85,7 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+});
+Contact.displayName = "Contact";
+
 export default Contact;

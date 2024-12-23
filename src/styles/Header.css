@@ -88,14 +88,14 @@
       display: flex;
       justify-content: space-between;
     }
-    .gnb li {
+    .gnb_link {
+      padding: 10px;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
       margin-bottom: 0px;
-      .gnb_link {
-        padding: 10px;
-        font-size: 1.6rem;
-        &:hover {
-          font-size: 1.8rem;
-        }
+      &:hover {
+        font-size: 1.8rem;
       }
     }
     .gnb_bg {

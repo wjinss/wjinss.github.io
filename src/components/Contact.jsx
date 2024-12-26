@@ -1,8 +1,37 @@
 import "../styles/Contact.css";
 import Button from "./Button";
+import { useRef } from "react";
 import { forwardRef } from "react";
+import emailjs from "@emailjs/browser";
+import config from "../../apikey";
 
 const Contact = forwardRef((props, ref) => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const API_KEY_service_id = config.MAIL_API_KEY_service_id;
+    const API_KEY_template_id = config.MAIL_API_KEY_template_id;
+    const API_KEY_user_id = config.MAIL_API_KEY_user_id;
+
+    emailjs
+      .sendForm(
+        API_KEY_service_id,
+        API_KEY_template_id,
+        form.current,
+        API_KEY_user_id
+      )
+      .then(
+        () => {
+          alert("메일을 성공적으로 보냈습니다!!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("메일을 보내는데 실패했습니다...", error.text);
+        }
+      );
+  };
+
   return (
     <section className="Contact" id="CONTACT" ref={ref}>
       <div className="sec_in">
@@ -25,10 +54,10 @@ const Contact = forwardRef((props, ref) => {
                 메일 보내기
               </p>
               <form
-                action="#"
-                method="post"
                 className="form_wrap"
                 id="contact_form"
+                onSubmit={sendEmail}
+                ref={form}
               >
                 <div className="input_box">
                   <input

@@ -35,7 +35,6 @@
     transition: 0.2s ease-in;
     &:hover {
       font-size: 2.4rem;
-      font-weight: 500;
     }
   }
   .gnb_bg {
@@ -98,8 +97,7 @@
         left: 0;
       }
       &:hover {
-        font-size: 1.6rem;
-        font-weight: 400;
+        font-size: inherit;
       }
       &:hover::before {
         transform: scaleX(1);

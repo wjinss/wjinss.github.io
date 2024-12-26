@@ -10,9 +10,9 @@ const getPublishungContents = [
   },
   {
     id: 2,
-    title: "개인 포트폴리오",
+    title: "개인 포트폴리오(리액트)",
     explain: "소개: 반응형 웹 포트폴리오 제작",
-    period: "기간: 디자인 4일, 코딩 6일",
+    period: "기간: 디자인 4일, 코딩 3주",
     part: "기여도: 1인 작업",
     tools: [7, 4, 5, 6],
     href: "#",

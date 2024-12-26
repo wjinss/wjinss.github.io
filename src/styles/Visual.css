@@ -54,3 +54,41 @@
     bottom: 5%;
   }
 }
+@media screen and (min-width: 600px) {
+  .visual_tit {
+    font-size: 4rem;
+  }
+  .visual_txt {
+    font-size: 2.2rem;
+  }
+  .visual_img {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 780px) {
+  .visual_tit {
+    font-size: 5rem;
+  }
+  .visual_txt {
+    font-size: 2.4rem;
+  }
+  .visual_img {
+    width: 65%;
+    max-width: 330px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .visual_tit {
+    font-size: 5.6rem;
+  }
+  .visual_txt {
+    font-size: 2.8rem;
+  }
+  .visual_img {
+    width: 30%;
+    max-width: 450px;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+  }
+}

@@ -2,8 +2,45 @@ import "../styles/Visual.css";
 import Particle from "./Particle";
 import visualImg from "../assets/visual.svg";
 import scrollIcon from "../assets/scorll_icon.svg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Visual = () => {
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".visual_img img", {
+      scrollTrigger: {
+        trigger: "#Visual",
+        start: "top top",
+        scrub: 1.5,
+      },
+      yPercent: 7,
+      scale: 4,
+      rotation: 30,
+    });
+
+    gsap.to(".visual_tit", {
+      scrollTrigger: {
+        trigger: "#Visual",
+        start: "top top",
+        scrub: 1.8,
+      },
+      yPercent: -500,
+      opacity: 0.3,
+    });
+
+    gsap.to(".visual_txt", {
+      scrollTrigger: {
+        trigger: "#Visual",
+        start: "top top",
+        scrub: 1.8,
+      },
+      yPercent: -600,
+      opacity: 0.1,
+    });
+  }, []);
   return (
     <section id="Visual" className="sec">
       <Particle />

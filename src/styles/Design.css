@@ -11,3 +11,10 @@
     margin-bottom: 30px;
   }
 }
+@media screen and (min-width: 1080px) {
+  #DESIGN {
+    h3 {
+      padding: 0 50px;
+    }
+  }
+}

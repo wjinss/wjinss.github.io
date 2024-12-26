@@ -2,6 +2,9 @@
   background: url(/public/images/profile_bg.png) no-repeat center bottom / cover;
   position: relative;
   z-index: 1;
+  h3 {
+    padding: 0 30px;
+  }
 }
 .about_bg {
   background: linear-gradient(
@@ -52,6 +55,11 @@
   }
 }
 @media screen and (min-width: 1080px) {
+  #ABOUT {
+    h3 {
+      padding: 0 50px;
+    }
+  }
   .about_wrap {
     padding: 50px 50px 0;
     display: flex;

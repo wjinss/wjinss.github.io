@@ -20,7 +20,7 @@ const Publishing = () => {
             href={publ.href}
             className={publ.id}
             logo={getLogos(publ.id)}
-            src={`url(../public/images/publishing_0${publ.id}.png)`}
+            src={`url(images/publishing_0${publ.id}.png)`}
           />
         ))}
       </div>

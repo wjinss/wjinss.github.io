@@ -43,6 +43,7 @@ const getPublishungContents = [
     part: "기여도: 디자인, 코딩 33%",
     tools: [1, 2, 4, 6],
     href: "http://aastu4343.dothome.co.kr/web_contents/airnbnb/index.html",
+    // onclick="window.open(this.href, '_blank', 'width=400, height=1000"
   },
   {
     id: 6,

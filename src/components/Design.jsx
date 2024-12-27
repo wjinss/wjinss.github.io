@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
 import imageList from "../util/imageList";
 import imageWebList from "../util/imageWebList";
-import Images from "./images";
+import Images from "./Images";
 import "swiper/css";
 import { Mousewheel, Autoplay } from "swiper/modules";
 import Modal from "./Modal";

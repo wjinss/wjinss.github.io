@@ -15,10 +15,7 @@ const About = () => {
               <p className="name_ko p_bold">정우진</p>
               <p className="name_en">JEONG WOO JIN</p>
               <div className="about_img">
-                <img
-                  src="/public/images/profile_img01.png"
-                  alt="프로필 이미지"
-                />
+                <img src="/images/profile_img01.png" alt="프로필 이미지" />
               </div>
             </div>
             <ul className="about_txt_box">

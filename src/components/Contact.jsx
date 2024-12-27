@@ -3,16 +3,15 @@ import Button from "./Button";
 import { useRef } from "react";
 import { forwardRef } from "react";
 import emailjs from "@emailjs/browser";
-import config from "../../apikey";
 
 const Contact = forwardRef((props, ref) => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
-    const API_KEY_service_id = config.MAIL_API_KEY_service_id;
-    const API_KEY_template_id = config.MAIL_API_KEY_template_id;
-    const API_KEY_user_id = config.MAIL_API_KEY_user_id;
+    const API_KEY_service_id = import.meta.env.VITE_MAIL_API_KEY_service_id;
+    const API_KEY_template_id = import.meta.env.VITE_MAIL_API_KEY_template_id;
+    const API_KEY_user_id = import.meta.env.VITE_MAIL_API_KEY_user_id;
 
     emailjs
       .sendForm(

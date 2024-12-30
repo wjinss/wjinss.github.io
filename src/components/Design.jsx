@@ -42,12 +42,10 @@ const Design = () => {
               centeredSlides={true}
               spaceBetween={30}
               loop={true}
-              // autoplay={{
-              //   delay: 6000,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 4500,
+              }}
               className="mySwiper"
-              // modules={[Autoplay]}
               breakpoints={{
                 600: {
                   slidesPerView: 2.5,
@@ -87,12 +85,10 @@ const Design = () => {
               centeredSlides={true}
               spaceBetween={30}
               loop={true}
-              // autoplay={{
-              //   delay: 6000,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 4500,
+              }}
               className="mySwiper"
-              // modules={[Autoplay]}
               breakpoints={{
                 600: {
                   slidesPerView: 2.5,

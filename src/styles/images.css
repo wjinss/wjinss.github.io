@@ -90,7 +90,7 @@
 
 .coding_hover {
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -118,7 +118,7 @@
 }
 .coding_layout:hover {
   .coding_hover {
-    top: 78%;
+    top: 85%;
     transition: all 0.3s ease-out;
   }
 }
@@ -137,14 +137,14 @@
     }
   }
   .coding_hover {
-    top: 85%;
+    top: 88%;
     h5 {
       font-size: 1.6rem;
     }
   }
   .coding_layout:hover {
     .coding_hover {
-      top: 80%;
+      top: 83%;
     }
   }
 }
@@ -155,7 +155,7 @@
     }
   }
   .coding_hover {
-    top: 88%;
+    top: 85%;
     h5 {
       font-size: 1.8rem;
     }
@@ -169,7 +169,7 @@
   }
   .coding_layout:hover {
     .coding_hover {
-      top: 83%;
+      top: 80%;
     }
   }
 }

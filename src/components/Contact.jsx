@@ -46,6 +46,13 @@ const Contact = forwardRef((props, ref) => {
               </p>
               <p className="con_txt">E-Mail: aastu4343@gmail.com</p>
               <p className="con_txt">Tel. +82 10 8455 2135</p>
+              <a
+                href="https://github.com/wjinss?tab=repositories"
+                target="_blank"
+                className="con_txt"
+              >
+                Github: wjinss
+              </a>
             </div>
             <div className="form_main">
               <p className="mail">

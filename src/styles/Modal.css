@@ -46,3 +46,12 @@
     border: none;
   }
 }
+
+@media screen and (min-width: 1080px) {
+  .coding_modal {
+    iframe {
+      scale: 1;
+      width: 70vw;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .Images {
   cursor: pointer;
   position: relative;
+  max-height: 700px;
   img {
     object-fit: cover;
   }
@@ -8,8 +9,9 @@
 
 .DESIGN_layout {
   figure {
+    width: 100%;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
   }
   img {
     max-width: 100%;
@@ -24,9 +26,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(27, 27, 27, 0.8);
-  overflow: hidden;
   transition: 0.35s ease-in;
-  border-radius: 10px;
+  border-radius: 15px;
   h5 {
     font-size: 1.4rem;
     line-height: 1.5;
@@ -49,7 +50,6 @@
   position: relative;
   figure {
     margin: 6vh 0;
-    border-radius: 5px;
   }
   img {
     max-width: 100%;
@@ -129,7 +129,6 @@
       font-size: 1.6rem;
     }
   }
-
   .coding_layout {
     width: 70vw;
     max-width: 350px;

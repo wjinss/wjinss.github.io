@@ -5,7 +5,7 @@ import imageList from "../util/imageList";
 import imageWebList from "../util/imageWebList";
 import Images from "./Images";
 import "swiper/css";
-import { Mousewheel, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import Modal from "./Modal";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -44,7 +44,9 @@ const Design = () => {
               loop={true}
               autoplay={{
                 delay: 4500,
+                disableOnInteraction: false,
               }}
+              modules={[Autoplay]}
               className="mySwiper"
               breakpoints={{
                 600: {
@@ -87,7 +89,9 @@ const Design = () => {
               loop={true}
               autoplay={{
                 delay: 4500,
+                disableOnInteraction: false,
               }}
+              modules={[Autoplay]}
               className="mySwiper"
               breakpoints={{
                 600: {

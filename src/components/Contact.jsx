@@ -39,9 +39,9 @@ const Contact = forwardRef((props, ref) => {
           <div className="contact_wrap">
             <div className="contact_txt_wrap">
               <p className="con_tit p_bold">
-                소통을 기반으로 배우면서 성장하는_
+                소통을 기반으로 배우고, 성장하는_
                 <span className="pc_br">
-                  웹 퍼블리셔가 필요하시면 메일을 보내주세요!
+                  웹 퍼블리셔가 필요하면 언제든지 연락해 주세요!
                 </span>
               </p>
               <p className="con_txt">E-Mail: aastu4343@gmail.com</p>

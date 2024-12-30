@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Images from "./Images";
 import Modal from "./Modal";
 import codingList from "../util/codingList";

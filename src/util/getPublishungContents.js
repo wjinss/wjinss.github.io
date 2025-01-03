@@ -41,7 +41,7 @@ const getPublishungContents = [
     explain: "소개: 에어비앤비 모바일 웹 리뉴얼",
     period: "기간: 디자인 7일, 코딩 7일",
     part: "기여도: 디자인, 코딩 33%",
-    tools: [1, 2, 4, 6],
+    tools: [1, 2, 3, 6],
     href: "http://aastu4343.dothome.co.kr/web_contents/airbnb/",
   },
   {

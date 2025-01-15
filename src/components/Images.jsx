@@ -1,4 +1,4 @@
-import "../styles/Images.css";
+import "../styles/images.css";
 
 const Images = ({ caption, src, onClick, className }) => {
   return (

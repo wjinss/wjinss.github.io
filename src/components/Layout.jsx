@@ -68,16 +68,6 @@ const Layout = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // 접속시 1번 새로고침
-  useEffect(() => {
-    const shouldReload = sessionStorage.getItem("shouldReload");
-
-    if (!shouldReload) {
-      sessionStorage.setItem("shouldReload", "true");
-      window.location.reload();
-    }
-  }, []);
-
   return (
     <div className="Layout bgcolor">
       <Header />

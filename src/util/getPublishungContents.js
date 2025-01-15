@@ -14,7 +14,7 @@ const getPublishungContents = [
     explain: "소개: 반응형 웹 포트폴리오 제작",
     period: "기간: 디자인 4일, 코딩 3주",
     part: "기여도: 1인 작업",
-    tools: [7, 4, 5, 6],
+    tools: [1, 2, 7, 4, 5, 6],
     href: "#",
   },
   {

@@ -40,21 +40,21 @@ const Coding = () => {
     const horizontalScrollLength =
       contentWrapper.scrollWidth - section.clientWidth;
 
-    const mobileDevice = window.matchMedia("(max-width: 1080px)").matches;
+    // const mobileDevice = window.matchMedia("(max-width: 1080px)").matches;
 
-    if (!mobileDevice) {
-      ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        end: () => `+=${horizontalScrollLength}`,
-        scrub: true,
-        pin: true,
-        animation: gsap.to(contentWrapper, {
-          x: -horizontalScrollLength,
-          ease: "none",
-        }),
-      });
-    }
+    // if (!mobileDevice) {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      end: () => `+=${horizontalScrollLength}`,
+      scrub: true,
+      pin: true,
+      animation: gsap.to(contentWrapper, {
+        x: -horizontalScrollLength,
+        ease: "none",
+      }),
+    });
+    // }
   });
 
   return (

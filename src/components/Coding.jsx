@@ -16,6 +16,7 @@ const Coding = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ src: "", caption: "" });
 
+  // 모달
   const openModal = (src, caption) => {
     setModalContent({ src, caption });
     setIsOpen(true);
@@ -30,6 +31,7 @@ const Coding = () => {
     ScrollTrigger.getAll().forEach((trigger) => trigger.enable());
     window.scrollTo(0, scrollY);
   };
+  // 모달 끝
   const horizontalScrollRef = useRef(null);
   const contentWrapperRef = useRef(null);
   useGSAP(() => {

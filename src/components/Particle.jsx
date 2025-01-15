@@ -29,6 +29,7 @@ const Particle = () => {
             zIndex: -1,
           }}
           options={{
+            fullScreen: { enable: false },
             fpsLimit: 120,
             interactivity: {
               events: {

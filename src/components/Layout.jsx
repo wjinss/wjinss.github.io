@@ -7,7 +7,7 @@ import Coding from "./Coding";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Button from "./Button";
-import { useState, useEffect, useRef, createContext } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Layout = () => {
   const [vw, setVw] = useState(window.innerWidth);
@@ -16,6 +16,7 @@ const Layout = () => {
   const delay = 200;
   const timerRef = useRef(null);
 
+  // 리사이즈 이벤트 및 1080해상도에서 헤더 변경
   useEffect(() => {
     const handleResize = () => {
       setVw(window.innerWidth);
@@ -23,7 +24,7 @@ const Layout = () => {
       if (timerRef.current) clearTimeout(timerRef.current);
 
       timerRef.current = setTimeout(() => {
-        if (vw >= 1100) {
+        if (vw >= 1080) {
           const header = document.querySelector(".Header");
           const mobileWrap = document.querySelector(".mobile_wrap");
           const mmenu = document.querySelector(".MMENU");
@@ -43,6 +44,7 @@ const Layout = () => {
     };
   }, [vw]);
 
+  // 푸터 영역 나오면 탑버튼 보여짐
   useEffect(() => {
     const handleScroll = () => {
       const scroll = window.scrollY;
@@ -61,6 +63,7 @@ const Layout = () => {
     };
   }, []);
 
+  // 탑버튼 클릭
   const handleTopClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

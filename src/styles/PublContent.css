@@ -270,10 +270,26 @@
 @media screen and (min-width: 1280px) {
   .web_bg {
     padding: 20px;
+    justify-content: inherit;
     .web_txt_wrap {
       top: 50%;
       left: 55%;
       width: 50%;
     }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .web_bg {
+    .web_txt_wrap {
+      top: 50%;
+      left: 55%;
+      width: 50%;
+    }
+  }
+  .web_tit {
+    font-size: 2.4rem;
+  }
+  .web_txt_list {
+    font-size: 2rem;
   }
 }

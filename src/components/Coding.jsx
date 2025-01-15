@@ -1,7 +1,6 @@
 import "../styles/Coding.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef, useState } from "react";
 import Images from "./Images";
@@ -39,19 +38,23 @@ const Coding = () => {
     const contentWrapper = contentWrapperRef.current;
 
     const horizontalScrollLength =
-      contentWrapper.scrollWidth - section.offsetWidth;
+      contentWrapper.scrollWidth - section.clientWidth;
 
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: () => `+=${horizontalScrollLength}`,
-      scrub: true,
-      pin: true,
-      animation: gsap.to(contentWrapper, {
-        x: -horizontalScrollLength,
-        ease: "none",
-      }),
-    });
+    const mobileDevice = window.matchMedia("(max-width: 1080px)").matches;
+
+    if (!mobileDevice) {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: () => `+=${horizontalScrollLength}`,
+        scrub: true,
+        pin: true,
+        animation: gsap.to(contentWrapper, {
+          x: -horizontalScrollLength,
+          ease: "none",
+        }),
+      });
+    }
   });
 
   return (

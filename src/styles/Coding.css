@@ -10,7 +10,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: nowrap;
     height: 100%;
+    width: max-content;
   }
   .coding_title {
     width: 25vw;
@@ -25,16 +27,14 @@
     padding: 15vh 50vw 0 0;
     margin-bottom: 15vh;
     height: 100%;
-    display: flex;
+    /* display: flex;
     flex: 1;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; */
+    display: inline-flex;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
-  }
-  .coding_contents > div {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
+    white-space: nowrap;
   }
 }
 

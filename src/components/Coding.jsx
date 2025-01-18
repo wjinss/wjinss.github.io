@@ -9,6 +9,10 @@ import codingList from "../util/codingList";
 
 gsap.registerPlugin(ScrollTrigger);
 
+ScrollTrigger.defaults({
+  markers: true,
+});
+
 const Coding = () => {
   const [codings] = useState(codingList);
 
@@ -26,37 +30,15 @@ const Coding = () => {
     e.preventDefault();
     setIsOpen(false);
     setModalContent({ src: "", caption: "" });
-    // const scrollY = window.scrollY;
-    // ScrollTrigger.getAll().forEach((trigger) => trigger.enable());
-    // window.scrollTo(0, scrollY);
+
+    const scrollY = window.scrollY;
+
+    ScrollTrigger.getAll().forEach((trigger) => trigger.enable());
     ScrollTrigger.refresh();
+
+    window.scrollTo(0, scrollY);
   };
   // 모달 끝
-  // 터치 이벤트
-  useEffect(() => {
-    const contentWrapper = contentWrapperRef.current;
-
-    const handleTouchStart = (e) => {
-      contentWrapper.dataset.startX = e.touches[0].pageX;
-      contentWrapper.dataset.scrollLeft = contentWrapper.scrollLeft;
-    };
-
-    const handleTouchMove = (e) => {
-      e.preventDefault();
-      const startX = parseFloat(contentWrapper.dataset.startX || "0");
-      const scrollLeft = parseFloat(contentWrapper.dataset.scrollLeft || "0");
-      const deltaX = startX - e.touches[0].pageX;
-      contentWrapper.scrollLeft = scrollLeft + deltaX;
-    };
-
-    contentWrapper.addEventListener("touchstart", handleTouchStart);
-    contentWrapper.addEventListener("touchmove", handleTouchMove);
-
-    return () => {
-      contentWrapper.removeEventListener("touchstart", handleTouchStart);
-      contentWrapper.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, []);
 
   const horizontalScrollRef = useRef(null);
   const contentWrapperRef = useRef(null);
@@ -65,26 +47,28 @@ const Coding = () => {
     const section = horizontalScrollRef.current;
     const contentWrapper = contentWrapperRef.current;
 
-    const horizontalScrollLength =
-      contentWrapper.scrollWidth - section.clientWidth;
+    // const horizontalScrollLength =
+    //   contentWrapper.scrollWidth - section.clientWidth;
 
-    // const mobileDevice = window.matchMedia("(max-width: 1080px)").matches;
+    const totalWidth = contentWrapper.scrollWidth;
+    const windowWidth = window.innerWidth;
+    const scrollAmount = totalWidth - windowWidth;
 
-    // if (!mobileDevice) {
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: () => `+=${horizontalScrollLength}`,
-      scrub: true,
-      pin: true,
-      animation: gsap.to(contentWrapper, {
-        x: -horizontalScrollLength,
-        ease: "none",
-      }),
+    let horizontalTween = gsap.to(contentWrapper, {
+      x: -scrollAmount,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: () => `+=${scrollAmount}`,
+        scrub: true,
+        pin: true,
+      },
     });
 
     return () => {
-      ScrollTrigger.kill();
+      horizontalTween?.kill();
+      ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, []);
 

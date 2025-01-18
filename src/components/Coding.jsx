@@ -2,7 +2,7 @@ import "../styles/Coding.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Images from "./Images";
 import Modal from "./Modal";
 import codingList from "../util/codingList";
@@ -26,14 +26,42 @@ const Coding = () => {
     e.preventDefault();
     setIsOpen(false);
     setModalContent({ src: "", caption: "" });
-    const scrollY = window.scrollY;
-    ScrollTrigger.getAll().forEach((trigger) => trigger.enable());
-    window.scrollTo(0, scrollY);
+    // const scrollY = window.scrollY;
+    // ScrollTrigger.getAll().forEach((trigger) => trigger.enable());
+    // window.scrollTo(0, scrollY);
+    ScrollTrigger.refresh();
   };
   // 모달 끝
+  // 터치 이벤트
+  useEffect(() => {
+    const contentWrapper = contentWrapperRef.current;
+
+    const handleTouchStart = (e) => {
+      contentWrapper.dataset.startX = e.touches[0].pageX;
+      contentWrapper.dataset.scrollLeft = contentWrapper.scrollLeft;
+    };
+
+    const handleTouchMove = (e) => {
+      e.preventDefault();
+      const startX = parseFloat(contentWrapper.dataset.startX || "0");
+      const scrollLeft = parseFloat(contentWrapper.dataset.scrollLeft || "0");
+      const deltaX = startX - e.touches[0].pageX;
+      contentWrapper.scrollLeft = scrollLeft + deltaX;
+    };
+
+    contentWrapper.addEventListener("touchstart", handleTouchStart);
+    contentWrapper.addEventListener("touchmove", handleTouchMove);
+
+    return () => {
+      contentWrapper.removeEventListener("touchstart", handleTouchStart);
+      contentWrapper.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, []);
+
   const horizontalScrollRef = useRef(null);
   const contentWrapperRef = useRef(null);
-  useGSAP(() => {
+
+  useEffect(() => {
     const section = horizontalScrollRef.current;
     const contentWrapper = contentWrapperRef.current;
 
@@ -54,8 +82,11 @@ const Coding = () => {
         ease: "none",
       }),
     });
-    // }
-  });
+
+    return () => {
+      ScrollTrigger.kill();
+    };
+  }, []);
 
   return (
     <div id="CODING">

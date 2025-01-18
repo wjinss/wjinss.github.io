@@ -28,7 +28,13 @@
     display: flex;
     flex: 1;
     flex-wrap: nowrap;
-    overflow-x: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .coding_contents > div {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
   }
 }
 
@@ -60,5 +66,10 @@
         padding: 0 50px;
       }
     }
+  }
+}
+@media (max-width: 1080px) {
+  .coding_wrap {
+    overflow-x: auto;
   }
 }

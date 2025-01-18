@@ -10,9 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: nowrap;
     height: 100%;
-    width: max-content;
   }
   .coding_title {
     width: 25vw;
@@ -27,14 +25,10 @@
     padding: 15vh 50vw 0 0;
     margin-bottom: 15vh;
     height: 100%;
-    /* display: flex;
+    display: flex;
     flex: 1;
-    flex-wrap: nowrap; */
-    display: inline-flex;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
   }
 }
 
@@ -66,10 +60,5 @@
         padding: 0 50px;
       }
     }
-  }
-}
-@media (max-width: 1080px) {
-  .coding_wrap {
-    overflow-x: auto;
   }
 }

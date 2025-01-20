@@ -9,10 +9,6 @@ import codingList from "../util/codingList";
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.defaults({
-  markers: true,
-});
-
 const Coding = () => {
   const [codings] = useState(codingList);
 

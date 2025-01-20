@@ -9,6 +9,10 @@ import codingList from "../util/codingList";
 
 gsap.registerPlugin(ScrollTrigger);
 
+ScrollTrigger.defaults({
+  markers: false,
+});
+
 const Coding = () => {
   const [codings] = useState(codingList);
 
@@ -39,7 +43,7 @@ const Coding = () => {
   const horizontalScrollRef = useRef(null);
   const contentWrapperRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const section = horizontalScrollRef.current;
     const contentWrapper = contentWrapperRef.current;
 
@@ -50,22 +54,30 @@ const Coding = () => {
     const windowWidth = window.innerWidth;
     const scrollAmount = totalWidth - windowWidth;
 
-    const horizontalTween = gsap.to(contentWrapper, {
-      x: -scrollAmount,
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${scrollAmount}`,
-        scrub: true,
-        pin: true,
-        pinType: "transform",
+    ScrollTrigger.matchMedia({
+      "(min-width: 1080px)": function () {
+        if (scrollAmount > 0) {
+          gsap.to(contentWrapper, {
+            x: -scrollAmount,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "center center",
+              end: () => `+=${scrollAmount}`,
+              scrub: true,
+              pin: true,
+            },
+          });
+        }
+      },
+
+      "(max-width: 1079px)": function () {
+        gsap.set(contentWrapper, { x: 0 });
       },
     });
 
     return () => {
-      horizontalTween.scrollTrigger?.kill();
-      horizontalTween.kill();
+      ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, []);
 

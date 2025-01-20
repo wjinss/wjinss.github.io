@@ -41,14 +41,15 @@
 }
 
 .coding_layout {
-  width: 85vw;
+  width: 90vw;
   max-width: 400px;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 1px solid var(--mainColor);
+  border-right: 0.5px solid var(--mainColor);
+  border-left: 0.5px solid var(--mainColor);
   position: relative;
   figure {
-    margin: 6rem 0 10rem;
+    margin: 5rem 0;
   }
   img {
     max-width: 100%;
@@ -129,7 +130,7 @@
     }
   }
   .coding_layout {
-    width: 70vw;
+    width: 43vw;
     max-width: 350px;
   }
   .coding_hover {
@@ -139,9 +140,27 @@
   }
 }
 @media screen and (min-width: 780px) {
-  .DESIGN_hover {
-    h5 {
-      font-size: 1.8rem;
+  .coding_layout {
+    width: 23vw;
+    max-width: 300px;
+  }
+  .coding_hover {
+    top: 88%;
+  }
+  .coding_layout:hover {
+    .coding_hover {
+      top: 86%;
+    }
+  }
+}
+@media screen and (min-width: 1080px) {
+  .coding_layout {
+    flex: none;
+    width: 23vw;
+    max-width: none;
+    border-left: none;
+    figure {
+      margin: 6rem 0 8rem;
     }
   }
   .coding_hover {
@@ -149,18 +168,36 @@
       font-size: 1.8rem;
     }
   }
-  .coding_layout {
-    width: 40vw;
-    max-width: 320px;
-  }
-}
-@media screen and (min-width: 1080px) {
-  .coding_layout {
-    width: 35vw;
-  }
 }
 @media screen and (min-width: 1280px) {
   .coding_layout {
-    width: 33vw;
+    width: 22vw;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .coding_layout {
+    width: 21vw;
+  }
+}
+@media screen and (min-width: 1480px) {
+  .coding_layout {
+    width: 20vw;
+    min-width: 299px;
+  }
+}
+@media screen and (min-width: 1580px) {
+  .coding_layout {
+    max-width: 309px;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .coding_layout {
+    width: 19vw;
+    max-width: none;
+  }
+}
+@media screen and (min-width: 1880px) {
+  .coding_layout {
+    width: 18vw;
   }
 }

@@ -48,7 +48,7 @@
   border-right: 1px solid var(--mainColor);
   position: relative;
   figure {
-    margin: 8vh 0 10vh;
+    margin: 8dvh 0 10dvh;
   }
   img {
     max-width: 100%;
@@ -132,7 +132,7 @@
     width: 70vw;
     max-width: 350px;
     figure {
-      margin: 8vh 0;
+      margin: 8dvh 0;
     }
   }
   .coding_hover {
@@ -156,7 +156,7 @@
     width: 40vw;
     max-width: 320px;
     figure {
-      margin: 10vh 0;
+      margin: 10dvh 0;
     }
   }
 }
@@ -164,7 +164,7 @@
   .coding_layout {
     width: 35vw;
     figure {
-      margin: 8vh 0;
+      margin: 8dvh 0;
     }
   }
 }
@@ -172,7 +172,7 @@
   .coding_layout {
     width: 33vw;
     figure {
-      margin: 6vh 0;
+      margin: 6dvh 0;
     }
   }
 }

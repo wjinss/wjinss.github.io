@@ -1,4 +1,5 @@
 html {
+  min-width: 375px;
   font-size: 10px;
   --mainColor: #00ddb3;
   --txtColor: #fff;
@@ -16,7 +17,7 @@ body {
 }
 body.no_scroll {
   overflow: hidden;
-  height: 100vh;
+  height: 100dvh;
 }
 h1,
 h2,

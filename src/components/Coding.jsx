@@ -50,7 +50,7 @@ const Coding = () => {
     const windowWidth = window.innerWidth;
     const scrollAmount = totalWidth - windowWidth;
 
-    let horizontalTween = gsap.to(contentWrapper, {
+    const horizontalTween = gsap.to(contentWrapper, {
       x: -scrollAmount,
       ease: "none",
       scrollTrigger: {
@@ -59,12 +59,13 @@ const Coding = () => {
         end: () => `+=${scrollAmount}`,
         scrub: true,
         pin: true,
+        pinType: "transform",
       },
     });
 
     return () => {
-      horizontalTween?.kill();
-      ScrollTrigger.getAll().forEach((st) => st.kill());
+      horizontalTween.scrollTrigger?.kill();
+      horizontalTween.kill();
     };
   }, []);
 

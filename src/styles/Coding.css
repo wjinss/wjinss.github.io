@@ -1,15 +1,17 @@
 .Coding {
-  width: 100vw;
+  width: 100%;
   position: relative;
   background-color: var(--bgColor);
   z-index: 1;
-  display: flex;
-  overflow: hidden;
+  /* display: flex;
+  overflow: hidden; */
   .coding_wrap {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    height: 100%;
+    align-items: flex-start; */
+    /* height: 100%; */
+    position: relative;
+    width: auto;
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -22,15 +24,21 @@
     }
   }
   .coding_contents {
-    width: max-content;
+    /* width: max-content;
     padding: 15vh 50vw 0 0;
-    /* margin-bottom: 15vh; */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    overflow-x: hidden; */
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    align-items: center;
+    width: max-content;
     overflow-x: hidden;
+    padding: 6rem 0;
   }
 }
 
@@ -40,7 +48,7 @@
       width: 25vw;
     }
     .coding_contents {
-      padding: 10vh 25vw 10vh 0;
+      padding: 7rem 0;
       margin-bottom: 0;
     }
   }
@@ -48,15 +56,12 @@
 @media screen and (min-width: 780px) {
   .Coding {
     .coding_contents {
-      padding: 15vh 25vw 15vh 0;
+      padding: 8rem 0;
     }
   }
 }
 @media screen and (min-width: 1080px) {
   #CODING {
-    .coding_contents {
-      padding: 20vh 25vw 20vh 0;
-    }
     .coding_title {
       h3 {
         padding: 0 50px;

@@ -66,5 +66,8 @@
         padding: 0 50px;
       }
     }
+    .coding_contents {
+      padding: 6rem 0 6rem 20vw;
+    }
   }
 }

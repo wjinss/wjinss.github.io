@@ -1,7 +1,7 @@
 import "../styles/Header.css";
 import logo from "../assets/logo.svg";
 import Button from "./Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [action, setAction] = useState(false);
@@ -15,6 +15,7 @@ const Header = () => {
     { id: `gnb4`, title: `CODING` },
     { id: `gnb5`, title: `CONTACT` },
   ]);
+  // nav클릭시 해당 섹션으로 이동
   const handleGnbClick = (e) => {
     e.preventDefault();
     const target = e.currentTarget.getAttribute("href");
@@ -25,6 +26,25 @@ const Header = () => {
     }
     setAction(false);
   };
+
+  // 스크롤 다운 헤더 사라짐, 스크롤 업 헤더 나타남
+  useEffect(() => {
+    const handleWheel = (e) => {
+      if (window.innerWidth >= 1080) {
+        if (e.deltaY < 0) {
+          document.querySelector(".Header").style.transform = "translateY(0)";
+        } else {
+          document.querySelector(".Header").style.transform =
+            "translateY(-100%)";
+        }
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel);
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
 
   return (
     <header className="Header">

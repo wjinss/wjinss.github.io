@@ -7,6 +7,7 @@
   width: 100%;
   padding: min(2.34vw, 30px) 0;
   z-index: 990;
+  transition: 0.2s ease;
   .header_in {
     height: 100%;
     display: flex;

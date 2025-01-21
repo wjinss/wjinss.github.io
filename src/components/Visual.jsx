@@ -7,6 +7,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Visual = () => {
+  // 비주얼 gsap 스크롤 트리거
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 

@@ -19,13 +19,14 @@ const Coding = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ src: "", caption: "" });
 
-  // 모달
+  // 모달 열기
   const openModal = (src, caption) => {
     setModalContent({ src, caption });
     setIsOpen(true);
     ScrollTrigger.getAll().forEach((trigger) => trigger.disable());
   };
 
+  // 모달 닫기
   const closeModal = (e) => {
     e.preventDefault();
     setIsOpen(false);

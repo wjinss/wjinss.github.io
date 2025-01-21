@@ -1,7 +1,7 @@
 import "../styles/Header.css";
 import logo from "../assets/logo.svg";
 import Button from "./Button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
   const [action, setAction] = useState(false);
@@ -28,14 +28,15 @@ const Header = () => {
   };
 
   // 스크롤 다운 헤더 사라짐, 스크롤 업 헤더 나타남
+  const headerRef = useRef(null);
   useEffect(() => {
+    const header = headerRef.current;
     const handleWheel = (e) => {
       if (window.innerWidth >= 1080) {
         if (e.deltaY < 0) {
-          document.querySelector(".Header").style.transform = "translateY(0)";
+          header.style.transform = "translateY(0)";
         } else {
-          document.querySelector(".Header").style.transform =
-            "translateY(-100%)";
+          header.style.transform = "translateY(-100%)";
         }
       }
     };
@@ -47,7 +48,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="Header">
+    <header className="Header" ref={headerRef}>
       <div className="in header_in">
         <h1 className="logo">
           <a href={"#Visual"}>

@@ -38,17 +38,14 @@ const Coding = () => {
 
     window.scrollTo(0, scrollY);
   };
-  // 모달 끝
 
+  // 가로 스크롤 구현
   const horizontalScrollRef = useRef(null);
   const contentWrapperRef = useRef(null);
 
   useGSAP(() => {
     const section = horizontalScrollRef.current;
     const contentWrapper = contentWrapperRef.current;
-
-    // const horizontalScrollLength =
-    //   contentWrapper.scrollWidth - section.clientWidth;
 
     const totalWidth = contentWrapper.scrollWidth;
     const windowWidth = window.innerWidth;

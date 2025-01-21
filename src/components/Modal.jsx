@@ -3,6 +3,7 @@ import Button from "./Button";
 import { useEffect } from "react";
 
 const Modal = ({ isOpen, onClose, children, className }) => {
+  // 모달 활성화되면 본문 스크롤x
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("no_scroll");

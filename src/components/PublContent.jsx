@@ -2,6 +2,7 @@ import "../styles/PublContent.css";
 import { getToolsIcon } from "../util/getToolsIcon.js";
 
 const PublContent = ({
+  id,
   title,
   explain,
   period,
@@ -37,12 +38,22 @@ const PublContent = ({
             </li>
           </ul>
         </div>
-        <div className="web_modal">
+        <div className="web_link_box">
           <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
             className="web_link"
+            role="button"
+            onClick={(e) => {
+              if (id === 5) {
+                window.open(
+                  href,
+                  "_blank",
+                  "width=440, height=860,noopener, noreferrer"
+                );
+              }
+            }}
           >
             View more
             <span></span>

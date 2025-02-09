@@ -12,6 +12,7 @@ const Publishing = () => {
         {publs.map((publ) => (
           <PublContent
             key={publ.id}
+            id={publ.id}
             title={publ.title}
             explain={publ.explain}
             period={publ.period}
